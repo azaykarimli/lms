@@ -1,0 +1,470 @@
+:root {
+  --fonu: "Nunito", sans-serif;
+  --fohe: "Heebo", sans-serif;
+  --fowe4: 400;
+  --fowe6: 600;
+  --txt-color: #072f60;
+  --hover-color: #3bbca7;
+  --small-color: #666666;
+  --transition: 0.3s;
+}
+
+#grid {
+  background-image: url(../image/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 325px;
+  position: relative;
+}
+#grid h1 {
+  font-family: var(--fohe);
+  color: var(--txt-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  line-height: 56px;
+  font-weight: var(--fowe6);
+}
+#grid .grid {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+#grid .grid:hover a {
+  color: var(--hover-color);
+}
+#grid .grid:hover :not(:hover) {
+  color: var(--small-color);
+}
+#grid .grid .before::before {
+  content: "/";
+}
+#grid .grid a {
+  color: var(--small-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+#grid .grid span {
+  color: var(--hover-color);
+  cursor: default;
+  transition: var(--transition);
+}
+
+#explore {
+  padding-top: 100px;
+}
+#explore h1 {
+  color: var(--txt-color);
+  font-family: var(--fohe);
+  font-weight: var(--fowe6);
+  text-align: center;
+  position: relative;
+}
+#explore h1 span {
+  position: absolute;
+  top: 12px;
+  left: 32.8%;
+  background-color: #ffd24d;
+  padding: 11.5px 92px;
+  border-radius: 8mm;
+  z-index: -1;
+}
+#explore .popular {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#explore .popular li {
+  list-style: none;
+  margin: 30px 0px 0px 40px;
+  text-transform: uppercase;
+  color: var(--txt-color);
+  font-family: var(--fohe);
+  font-weight: var(--fowe6);
+  line-height: 20px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+#explore .popular li.active {
+  color: #3bbca7;
+}
+#explore .popular li sup {
+  font-size: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  color: var(--hover-color);
+}
+#explore .popular li:hover {
+  color: var(--hover-color);
+}
+#explore .popular li:hover sup {
+  opacity: 1;
+  visibility: visible;
+}
+#explore .popular li:first-child {
+  margin-left: 0;
+}
+#explore .popular li:first-child sup {
+  font-size: 10px;
+  visibility: visible;
+  opacity: 1;
+}
+#explore .courses {
+  width: 100%;
+  transition: 0.3s;
+}
+#explore .courses .all,
+#explore .courses .finance,
+#explore .courses .science,
+#explore .courses .business,
+#explore .courses .cooking,
+#explore .courses .lifestyle,
+#explore .courses .marketing {
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.07);
+  position: relative;
+  margin-top: 50px;
+}
+#explore .courses .all:hover .overlay,
+#explore .courses .finance:hover .overlay,
+#explore .courses .science:hover .overlay,
+#explore .courses .business:hover .overlay,
+#explore .courses .cooking:hover .overlay,
+#explore .courses .lifestyle:hover .overlay,
+#explore .courses .marketing:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition);
+}
+#explore .courses .all .img img,
+#explore .courses .finance .img img,
+#explore .courses .science .img img,
+#explore .courses .business .img img,
+#explore .courses .cooking .img img,
+#explore .courses .lifestyle .img img,
+#explore .courses .marketing .img img {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+#explore .courses .all .science,
+#explore .courses .finance .science,
+#explore .courses .science .science,
+#explore .courses .business .science,
+#explore .courses .cooking .science,
+#explore .courses .lifestyle .science,
+#explore .courses .marketing .science {
+  margin-top: 30px;
+}
+#explore .courses .all .science a,
+#explore .courses .finance .science a,
+#explore .courses .science .science a,
+#explore .courses .business .science a,
+#explore .courses .cooking .science a,
+#explore .courses .lifestyle .science a,
+#explore .courses .marketing .science a {
+  padding: 0px 15px 0px 15px;
+  background-color: rgba(59, 188, 167, 0.0705882353);
+  color: #3bbca7;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: var(--fowe6);
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 29px;
+}
+#explore .courses .all .science span,
+#explore .courses .finance .science span,
+#explore .courses .science .science span,
+#explore .courses .business .science span,
+#explore .courses .cooking .science span,
+#explore .courses .lifestyle .science span,
+#explore .courses .marketing .science span {
+  color: var(--txt-color);
+  font-weight: var(--fowe6);
+}
+#explore .courses .all h4,
+#explore .courses .finance h4,
+#explore .courses .science h4,
+#explore .courses .business h4,
+#explore .courses .cooking h4,
+#explore .courses .lifestyle h4,
+#explore .courses .marketing h4 {
+  margin-top: 30px;
+}
+#explore .courses .all h4 a,
+#explore .courses .finance h4 a,
+#explore .courses .science h4 a,
+#explore .courses .business h4 a,
+#explore .courses .cooking h4 a,
+#explore .courses .lifestyle h4 a,
+#explore .courses .marketing h4 a {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: var(--fowe6);
+  font-family: var(--fohe);
+  text-decoration: none;
+  color: var(--txt-color);
+}
+#explore .courses .all .tim,
+#explore .courses .finance .tim,
+#explore .courses .science .tim,
+#explore .courses .business .tim,
+#explore .courses .cooking .tim,
+#explore .courses .lifestyle .tim,
+#explore .courses .marketing .tim {
+  color: #838383;
+  font-size: 15px;
+}
+#explore .courses .all .tim img,
+#explore .courses .finance .tim img,
+#explore .courses .science .tim img,
+#explore .courses .business .tim img,
+#explore .courses .cooking .tim img,
+#explore .courses .lifestyle .tim img,
+#explore .courses .marketing .tim img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#explore .courses .all .user,
+#explore .courses .finance .user,
+#explore .courses .science .user,
+#explore .courses .business .user,
+#explore .courses .cooking .user,
+#explore .courses .lifestyle .user,
+#explore .courses .marketing .user {
+  font-size: 12px;
+  color: #838383;
+}
+#explore .courses .all .user i,
+#explore .courses .finance .user i,
+#explore .courses .science .user i,
+#explore .courses .business .user i,
+#explore .courses .cooking .user i,
+#explore .courses .lifestyle .user i,
+#explore .courses .marketing .user i {
+  font-size: 14px;
+  color: var(--hover-color);
+  margin-left: 10px;
+}
+#explore .courses .all .raiting,
+#explore .courses .finance .raiting,
+#explore .courses .science .raiting,
+#explore .courses .business .raiting,
+#explore .courses .cooking .raiting,
+#explore .courses .lifestyle .raiting,
+#explore .courses .marketing .raiting {
+  font-size: 14px;
+  color: #ffb60a;
+}
+#explore .courses .all .raiting i,
+#explore .courses .finance .raiting i,
+#explore .courses .science .raiting i,
+#explore .courses .business .raiting i,
+#explore .courses .cooking .raiting i,
+#explore .courses .lifestyle .raiting i,
+#explore .courses .marketing .raiting i {
+  margin-right: 5px;
+}
+#explore .courses .all .raiting i.son,
+#explore .courses .finance .raiting i.son,
+#explore .courses .science .raiting i.son,
+#explore .courses .business .raiting i.son,
+#explore .courses .cooking .raiting i.son,
+#explore .courses .lifestyle .raiting i.son,
+#explore .courses .marketing .raiting i.son {
+  color: #838383;
+}
+#explore .courses .all .overlay,
+#explore .courses .finance .overlay,
+#explore .courses .science .overlay,
+#explore .courses .business .overlay,
+#explore .courses .cooking .overlay,
+#explore .courses .lifestyle .overlay,
+#explore .courses .marketing .overlay {
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  right: -25px;
+  padding: 25px 40px 42px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px 11px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  z-index: 100;
+}
+#explore .courses .all .overlay .burton,
+#explore .courses .finance .overlay .burton,
+#explore .courses .science .overlay .burton,
+#explore .courses .business .overlay .burton,
+#explore .courses .cooking .overlay .burton,
+#explore .courses .lifestyle .overlay .burton,
+#explore .courses .marketing .overlay .burton {
+  color: #838383;
+  font-size: 15px;
+}
+#explore .courses .all .overlay .burton img,
+#explore .courses .finance .overlay .burton img,
+#explore .courses .science .overlay .burton img,
+#explore .courses .business .overlay .burton img,
+#explore .courses .cooking .overlay .burton img,
+#explore .courses .lifestyle .overlay .burton img,
+#explore .courses .marketing .overlay .burton img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#explore .courses .all .overlay .price,
+#explore .courses .finance .overlay .price,
+#explore .courses .science .overlay .price,
+#explore .courses .business .overlay .price,
+#explore .courses .cooking .overlay .price,
+#explore .courses .lifestyle .overlay .price,
+#explore .courses .marketing .overlay .price {
+  margin-top: 30px;
+}
+#explore .courses .all .overlay .price a,
+#explore .courses .finance .overlay .price a,
+#explore .courses .science .overlay .price a,
+#explore .courses .business .overlay .price a,
+#explore .courses .cooking .overlay .price a,
+#explore .courses .lifestyle .overlay .price a,
+#explore .courses .marketing .overlay .price a {
+  padding: 0px 15px 0px 15px;
+  background-color: rgba(59, 188, 167, 0.0705882353);
+  color: #3bbca7;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: var(--fowe6);
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 29px;
+  transition: var(--transition);
+}
+#explore .courses .all .overlay .price a:hover,
+#explore .courses .finance .overlay .price a:hover,
+#explore .courses .science .overlay .price a:hover,
+#explore .courses .business .overlay .price a:hover,
+#explore .courses .cooking .overlay .price a:hover,
+#explore .courses .lifestyle .overlay .price a:hover,
+#explore .courses .marketing .overlay .price a:hover {
+  background-color: var(--hover-color);
+  color: #fff;
+}
+#explore .courses .all .overlay .price span,
+#explore .courses .finance .overlay .price span,
+#explore .courses .science .overlay .price span,
+#explore .courses .business .overlay .price span,
+#explore .courses .cooking .overlay .price span,
+#explore .courses .lifestyle .overlay .price span,
+#explore .courses .marketing .overlay .price span {
+  color: var(--txt-color);
+  font-weight: var(--fowe6);
+}
+#explore .courses .all .overlay h4,
+#explore .courses .finance .overlay h4,
+#explore .courses .science .overlay h4,
+#explore .courses .business .overlay h4,
+#explore .courses .cooking .overlay h4,
+#explore .courses .lifestyle .overlay h4,
+#explore .courses .marketing .overlay h4 {
+  margin-top: 30px;
+}
+#explore .courses .all .overlay h4:hover a,
+#explore .courses .finance .overlay h4:hover a,
+#explore .courses .science .overlay h4:hover a,
+#explore .courses .business .overlay h4:hover a,
+#explore .courses .cooking .overlay h4:hover a,
+#explore .courses .lifestyle .overlay h4:hover a,
+#explore .courses .marketing .overlay h4:hover a {
+  color: var(--hover-color);
+}
+#explore .courses .all .overlay h4 a,
+#explore .courses .finance .overlay h4 a,
+#explore .courses .science .overlay h4 a,
+#explore .courses .business .overlay h4 a,
+#explore .courses .cooking .overlay h4 a,
+#explore .courses .lifestyle .overlay h4 a,
+#explore .courses .marketing .overlay h4 a {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: var(--fowe6);
+  font-family: var(--fohe);
+  text-decoration: none;
+  color: var(--txt-color);
+  transition: var(--transition);
+}
+#explore .courses .all .overlay .lesson i,
+#explore .courses .finance .overlay .lesson i,
+#explore .courses .science .overlay .lesson i,
+#explore .courses .business .overlay .lesson i,
+#explore .courses .cooking .overlay .lesson i,
+#explore .courses .lifestyle .overlay .lesson i,
+#explore .courses .marketing .overlay .lesson i {
+  font-size: 14px;
+  color: var(--hover-color);
+  margin-left: 10px;
+}
+#explore .courses .all .overlay .lesson span,
+#explore .courses .finance .overlay .lesson span,
+#explore .courses .science .overlay .lesson span,
+#explore .courses .business .overlay .lesson span,
+#explore .courses .cooking .overlay .lesson span,
+#explore .courses .lifestyle .overlay .lesson span,
+#explore .courses .marketing .overlay .lesson span {
+  color: #666666;
+}
+#explore .courses .all .overlay p,
+#explore .courses .finance .overlay p,
+#explore .courses .science .overlay p,
+#explore .courses .business .overlay p,
+#explore .courses .cooking .overlay p,
+#explore .courses .lifestyle .overlay p,
+#explore .courses .marketing .overlay p {
+  font-size: 15px;
+  color: #666666;
+  margin-top: 20px;
+}
+#explore .courses .all .overlay .preview,
+#explore .courses .finance .overlay .preview,
+#explore .courses .science .overlay .preview,
+#explore .courses .business .overlay .preview,
+#explore .courses .cooking .overlay .preview,
+#explore .courses .lifestyle .overlay .preview,
+#explore .courses .marketing .overlay .preview {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--hover-color);
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 10px 30px;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: var(--transition);
+}
+#explore .courses .all .overlay .preview:hover,
+#explore .courses .finance .overlay .preview:hover,
+#explore .courses .science .overlay .preview:hover,
+#explore .courses .business .overlay .preview:hover,
+#explore .courses .cooking .overlay .preview:hover,
+#explore .courses .lifestyle .overlay .preview:hover,
+#explore .courses .marketing .overlay .preview:hover {
+  background-color: var(--txt-color);
+}
+#explore .courses.active {
+  opacity: 0;
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */
